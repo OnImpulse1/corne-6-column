@@ -6,7 +6,6 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
 
 / {
     combos {
@@ -16,6 +15,12 @@
             bindings = <&to 0>;
             key-positions = <38 39>;
             layers = <1 2>;
+        };
+
+        new_combo {
+            bindings = <&bt BT_NXT>;
+            key-positions = <29 28 27>;
+            layers = <2>;
         };
     };
 
@@ -227,9 +232,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &none  &bt BT_SEL 0
-&trans     &none   &prev     &none     &next      &none    &kp GRAVE  &kp BSLH  &kp LBKT  &kp RBKT  &none  &bt BT_SEL 1
- &none     &none   &none     &none     &none      &none    &kp TILDE  &kp PIPE  &kp LBRC  &kp RBRC  &none         &none
+ &none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &kp LPAR  &kp RPAR  &none  &none
+&trans     &none   &prev     &none     &next      &none    &kp GRAVE  &kp BSLH  &kp LBKT  &kp RBKT  &none  &none
+ &none     &none   &none     &none     &none      &none    &kp TILDE  &kp PIPE  &kp LBRC  &kp RBRC  &none  &none
                              &none    &trans      &none        &none     &none     &none
             >;
 
