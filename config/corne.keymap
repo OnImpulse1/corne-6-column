@@ -17,10 +17,19 @@
             layers = <1 2>;
         };
 
-        new_combo {
+        layer1 {
+            bindings = <&mo_tog 1 1>;
+            key-positions = <16 15 14>;
+        };
+
+        bt_cycle {
             bindings = <&bt BT_NXT>;
-            key-positions = <29 28 27>;
-            layers = <2>;
+            key-positions = <10 22>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
         };
     };
 
@@ -185,6 +194,17 @@
                 <&kp N9>,
                 <&kp F9>;
         };
+        meh: meh {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MEH";
+            bindings =
+                <&kp>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -198,10 +218,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-    &kp TAB  &kp Q  &kp W     &kp F      &kp P      &kp G       &kp J        &kp L        &kp U    &kp Y  &kp SEMI   &kp RGUI
-  &kp LCTRL  &kp A  &kp R     &kp S      &kp T      &kp D       &kp H        &kp N        &kp E    &kp I     &kp O    &kp SQT
-&copy_paste  &kp Z  &kp X     &kp C      &kp V      &kp B       &kp K        &kp M    &kp COMMA  &kp DOT  &kp FSLH  &esc_undo
-                           &kp LALT  &kp LSHFT  &kp SPACE    &kp BSPC  &mo_tog 1 1  &mo_tog 2 2
+&none  &kp Q  &kp W     &kp F      &kp P                  &kp G       &kp J        &kp L        &kp U    &kp Y  &kp SEMI  &none
+&none  &kp A  &kp R     &kp S      &kp T                  &kp D       &kp H        &kp N        &kp E    &kp I     &kp O  &none
+&none  &kp Z  &kp X     &kp C      &kp V                  &kp B       &kp K        &kp M    &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &kp LALT  &kp LSHFT  &meh SPACE LS(LA(LC))    &kp BSPC  &mo_tog 1 1  &mo_tog 2 2
             >;
 
             label = "alpha";
@@ -215,9 +235,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
- &none     &none      &none     &kp UP_ARROW      &none  &kp GRAVE    &kp EQUAL    &f7    &f8  &f9          &none  &none
-&trans     &none   &kp LEFT         &kp DOWN  &kp RIGHT      &none       &kp N0    &f4    &f5  &f6          &none  &none
- &none  &kp PLUS  &kp MINUS  &kp KP_MULTIPLY  &kp SLASH      &none        &none    &f1    &f2  &f3  &kp LS(MINUS)  &none
+ &none     &none      &none     &kp UP_ARROW      &none      &copy    &kp EQUAL    &f7    &f8  &f9          &none  &none
+&trans     &none   &kp LEFT         &kp DOWN  &kp RIGHT     &paste       &kp N0    &f4    &f5  &f6          &none  &none
+ &none  &kp PLUS  &kp MINUS  &kp KP_MULTIPLY  &kp SLASH      &undo        &none    &f1    &f2  &f3  &kp LS(MINUS)  &none
                                        &none     &trans  &kp ENTER      &kp DEL  &none  &none
             >;
 
