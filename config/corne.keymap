@@ -171,10 +171,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q           &kp W  &tap_layer F 5              &kp P                           &kp G       &kp J              &kp L             &kp U           &kp Y  &kp SEMI  &none
-&none  &kp A  &tap_layer R 2           &kp S  &hold_tap T LCTRL                           &kp D       &kp H  &hold_tap N RCTRL    &tap_layer E 4  &tap_layer I 3     &kp O  &none
-&none  &kp Z           &kp X           &kp C              &kp V                           &kp B       &kp K              &kp M         &kp COMMA         &kp DOT  &kp FSLH  &none
-                                    &kp LGUI          &kp LSHFT  &hold_tap SPACE LA(LC(LSHIFT))    &kp BSPC        &mo_tog 1 1  &copy_paste_undo
+&none  &kp Q  &kp W    &tap_layer F 4              &kp P                           &kp G       &kp J              &kp L           &kp U           &kp Y  &kp SEMI  &none
+&none  &kp A  &kp R    &tap_layer S 2  &hold_tap T LCTRL                           &kp D       &kp H  &hold_tap N RCTRL  &tap_layer E 2  &tap_layer I 3     &kp O  &none
+&none  &kp Z  &kp X             &kp C              &kp V                           &kp B       &kp K              &kp M       &kp COMMA         &kp DOT  &kp FSLH  &none
+                     &copy_paste_undo          &kp LSHFT  &hold_tap SPACE LA(LC(LSHIFT))    &kp BSPC        &mo_tog 1 1        &kp RGUI
             >;
 
             label = "alpha";
@@ -188,16 +188,16 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none   &kp LALT    &kp TAB     &kp UP_ARROW      &prev      &next        &none  &hold_tap N7 F7  &hold_tap N8 F8  &hold_tap N9 F9  &none  &none
-&none  &kp EQUAL   &kp LEFT         &kp DOWN  &kp RIGHT      &none       &kp N0  &hold_tap N4 F4  &hold_tap N5 F5  &hold_tap N6 F6  &none  &none
-&none   &kp PLUS  &kp MINUS  &kp KP_MULTIPLY  &kp SLASH      &none        &none  &hold_tap N1 F1  &hold_tap N2 F2  &hold_tap N3 F3  &none  &none
-                                       &none  &kp LCTRL  &kp ENTER    &kp RSHFT        &kp COMMA          &kp DOT
+&none      &none      &prev      &kp UP_ARROW      &next      &none        &none  &hold_tap N7 F7  &hold_tap N8 F8  &hold_tap N9 F9  &none  &none
+&none  &kp EQUAL   &kp LEFT          &kp DOWN  &kp RIGHT      &none       &kp N0  &hold_tap N4 F4  &hold_tap N5 F5  &hold_tap N6 F6  &none  &none
+&none   &kp PLUS  &kp MINUS   &kp KP_MULTIPLY  &kp SLASH      &none        &none  &hold_tap N1 F1  &hold_tap N2 F2  &hold_tap N3 F3  &none  &none
+                             &copy_paste_undo  &kp LCTRL  &kp ENTER    &kp RSHFT        &kp COMMA          &kp DOT
             >;
 
             label = "num";
         };
 
-        code {
+        sym {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -205,30 +205,21 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &none  &none  &none  &none  &none        &none     &none  &kp LPAR  &kp RPAR  &none  &none
-&none  &none  &none  &none  &none  &none    &kp GRAVE  &kp BSLH  &kp LBKT  &kp RBKT  &none  &none
-&none  &none  &none  &none  &none  &none    &kp TILDE  &kp PIPE  &kp LBRC  &kp RBRC  &none  &none
-                     &none  &none  &none        &none     &none     &none
+&none     &none     &kp AT   &kp HASH       &kp EXCL  &none        &none     &none  &kp LPAR  &kp RPAR  &none  &none
+&none  &kp DLLR  &kp PRCNT  &kp CARET       &kp AMPS  &none    &kp GRAVE  &kp BSLH  &kp LBKT  &kp RBKT  &none  &none
+&none     &none      &none      &none  &kp LS(MINUS)  &none    &kp TILDE  &kp PIPE  &kp LBRC  &kp RBRC  &none  &none
+                                &none          &none  &none        &none     &none     &none
             >;
 
-            label = "code";
-        };
-
-        sym {
-            bindings = <
-&none     &none     &kp AT   &kp HASH       &kp EXCL  &none    &none  &none  &none  &none  &none  &none
-&none  &kp DLLR  &kp PRCNT  &kp CARET       &kp AMPS  &none    &none  &none  &none  &none  &none  &none
-&none     &none      &none      &none  &kp LS(MINUS)  &none    &none  &none  &none  &none  &none  &none
-                                &none          &none  &none    &none  &none  &none
-            >;
+            label = "sym";
         };
 
         med {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none     &none  &none  &kp C_NEXT  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &kp C_PP  &none  &kp C_PREV  &none  &none
-&none  &none  &none  &none  &none  &none    &none     &none  &none       &none  &none  &none
-                     &none  &none  &none    &none     &none  &none
+&none  &none  &none  &kp LGUI    &none  &none    &none     &none  &kp C_NEXT  &none  &none  &none
+&none  &none  &none  &kp LALT  &kp TAB  &none    &none  &kp C_PP  &kp K_PREV  &none  &none  &none
+&none  &none  &none     &none    &none  &none    &none     &none       &none  &none  &none  &none
+                        &none    &none  &none    &none     &none       &none
             >;
         };
 
