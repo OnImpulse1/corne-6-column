@@ -23,12 +23,6 @@
             layers = <0 1>;
         };
 
-        bt_cycle {
-            bindings = <&bt BT_NXT>;
-            key-positions = <10 22>;
-            layers = <0>;
-        };
-
         esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
