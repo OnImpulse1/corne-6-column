@@ -172,10 +172,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W    &tap_layer 4 F              &kp P                           &kp G       &kp J              &kp L           &kp U           &kp Y  &kp SEMI  &none
-&none  &kp A  &kp R    &tap_layer 2 S  &hold_tap LCTRL T                           &kp D       &kp H  &hold_tap RCTRL N  &tap_layer 2 E  &tap_layer 3 I     &kp O  &none
-&none  &kp Z  &kp X             &kp C              &kp V                           &kp B       &kp K              &kp M       &kp COMMA         &kp DOT  &kp FSLH  &none
-                     &copy_paste_undo          &kp LSHFT  &hold_tap SPACE LA(LC(LSHIFT))    &kp BSPC        &mo_tog 1 1     &key_repeat
+&none  &kp Q  &kp W    &tap_layer 4 F              &kp P                          &kp G       &kp J              &kp L           &kp U           &kp Y  &kp SEMI  &none
+&none  &kp A  &kp R    &tap_layer 2 S  &hold_tap LCTRL T                          &kp D       &kp H  &hold_tap RCTRL N  &tap_layer 2 E  &tap_layer 3 I     &kp O  &none
+&none  &kp Z  &kp X             &kp C              &kp V                          &kp B       &kp K              &kp M       &kp COMMA         &kp DOT  &kp FSLH  &none
+                     &copy_paste_undo          &kp LSHFT  &hold_tap LA(LC(LSHFT)) SPACE    &kp BSPC        &mo_tog 1 1     &key_repeat
             >;
 
             label = "alpha";
