@@ -35,6 +35,12 @@
             key-positions = <32 33>;
             layers = <0 1>;
         };
+
+        apos {
+            bindings = <&kp APOS>;
+            key-positions = <21 22>;
+            layers = <0 1>;
+        };
     };
 
     macros {
