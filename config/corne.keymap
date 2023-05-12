@@ -195,7 +195,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none      &none      &prev      &kp UP_ARROW      &next      &none        &none  &hold_tap F7 N7  &hold_tap F8 N8  &hold_tap F9 N9  &none  &none
+&none      &none      &next      &kp UP_ARROW      &prev      &none        &none  &hold_tap F7 N7  &hold_tap F8 N8  &hold_tap F9 N9  &none  &none
 &none  &kp EQUAL   &kp LEFT          &kp DOWN  &kp RIGHT      &none       &kp N0  &hold_tap F4 N4  &hold_tap F5 N5  &hold_tap F6 N6  &none  &none
 &none   &kp PLUS  &kp MINUS   &kp KP_MULTIPLY  &kp SLASH      &none        &none  &hold_tap F1 N1  &hold_tap F2 N2  &hold_tap F3 N3  &none  &none
                              &copy_paste_undo   &kp LGUI  &kp LSHFT    &kp RCTRL        &kp COMMA          &kp DOT
